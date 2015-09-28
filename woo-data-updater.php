@@ -69,16 +69,11 @@ if ( ! class_exists( 'Woo_Data_Updater' ) ) {
 		 * WooCommerce_Custom_Emails Constructor.
 		 */
 		public function __construct() {
-			add_action( 'init', array( $this, 'init' ) );
-		}
-
-		/**
-		 * Init WooCommerce when WordPress Initialises.
-		 */
-		public function init() {
+			if ( defined( 'WP_CLI' ) && WP_CLI ) {
+				require_once( plugin_dir_path( __FILE__ ) . '/class-wc-data-update-cli.php' );
+			}
 
 			add_action( 'init', array( $this, 'run_wc_data_update_script' ) );
-
 		}
 
 		public function run_wc_data_update_script() {
