@@ -77,6 +77,17 @@ if ( ! class_exists( 'Woo_Data_Updater' ) ) {
 		 */
 		public function init() {
 
+			add_action( 'init', array( $this, 'run_wc_data_update_script' ) );
+
+		}
+
+		public function run_wc_data_update_script() {
+			if ( isset( $_REQUEST['wc_data_update'] ) && '1' == $_REQUEST['wc_data_update'] ) {
+				$exec_command = 'wp ezw-wc-data update';
+				shell_exec( 'cd ' . ABSPATH . ' ; ' . $exec_command . ' &> /dev/null &' );
+				print "WooCommerce Data Update Has Been Started!";
+				exit;
+			}
 		}
 
 	}
