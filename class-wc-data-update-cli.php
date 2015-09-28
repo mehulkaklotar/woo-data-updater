@@ -19,6 +19,8 @@ class Wc_Data_Update_CLI_Command extends WP_CLI_Command {
 	 *
 	 */
 	function update( $args, $assoc_args ) {
+		error_log('WOOCOMMERCE DATA UPDATER STARED!');
+		error_log('PLEASE DO NOT CLOSE THE TERMINAL UNTIL PROCESS FINISHES. THE PROCESS USES WOOCOMMERCE DATA UPDATER CLASSES AND FUNCTIONS SO IT WILL RUN THE PROCESS AND AT THE END WILL TRY TO REDIRECT SOMEWHERE WHICH IS A FEATURE IN POST REQUEST DATA UPDATER. IF THE PROCESS DOES THIS, CONSIDER YOUR DATA UPDATER RUN SUCCESSFULLY.');
 		$_GET['do_update_woocommerce'] = 'yes';
 		$wc_install                    = new WC_Install();
 		$wc_install->install_actions();
