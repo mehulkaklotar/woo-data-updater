@@ -78,7 +78,7 @@ if ( ! class_exists( 'Woo_Data_Updater' ) ) {
 
 		public function run_wc_data_update_script() {
 			if ( isset( $_REQUEST['wc_data_update'] ) && '1' == $_REQUEST['wc_data_update'] ) {
-				$exec_command = 'wp ezw-wc-data update';
+				$exec_command = 'wp wc-data update';
 				shell_exec( 'cd ' . ABSPATH . ' ; ' . $exec_command . ' &> /dev/null &' );
 				print "WooCommerce Data Update Has Been Started!";
 				exit;
