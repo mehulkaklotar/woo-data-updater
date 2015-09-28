@@ -84,7 +84,7 @@ if ( ! class_exists( 'Woo_Data_Updater' ) ) {
 	/**
 	 * Returns the main instance of Woo_Data_Updater to prevent the need to use globals.
 	 *
-	 * @since  0.1
+	 * @since  1.0
 	 * @return Woo_Data_Updater
 	 */
 	function woo_data_updater() {
