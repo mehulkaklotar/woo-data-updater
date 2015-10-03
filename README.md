@@ -3,7 +3,7 @@ Contributors: mehulkaklotar
 Tags: woocommerce data updater, data updater, woo data updater, woocommerce, updater, data, version update, wp, cli, wp cli
 Requires at least: 4.0
 Tested up to: 4.3
-Stable tag: 1.0.0
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,5 +36,5 @@ An answer to that question.
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.0 =
 * Initial release
